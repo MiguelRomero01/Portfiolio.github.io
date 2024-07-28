@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/*"Nunito", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Signika+Negative:wght@300..700&display=swap');
+/*"Signika Negative"*/
+
+@keyframes show{
+    from{
+        opacity: 0;scale: 1%;
+    }
+
+    to{
+        opacity: 1; scale: 100%;
+    }
+}
+
+
+/*animation opacity*/
+.aptitude,#img-container,.certificate-card{
+    object-fit: cover;
+    view-timeline-name: --reveal;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.aptitude,.Experience-projects,#img-container{
+    animation-name: show;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+     margin: 0;
+     padding: 0;
+     background:rgba(193, 191, 191, 0.338);
+}
+
+/*---------------NavBar--------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F2613F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    z-index: 2;
+}
+
+.navbar a{
+    font-size: 95%;
+    font-family: "Nunito", sans-serif;;
+    color: white;
+    text-decoration: none;
+    padding: 1.5vh 2vw;
+    transition: all 0.2s ease;
+}
+
+.navbar a.active {
+    color: #ffffff;
+    font-weight: bold;
+    height: 15px;
+    border-bottom: 2px solid #fbffff;
+    transition: all 0.4s ease-in;
+    scale: 1.1;
+}
+ 
+/*Section Page*/
+.section {
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 10vh;
+}
+
+hr{
+    height: 3px;
+    background-color: transparent;
+    margin-top: 8vh;
+    background-color: black;
+}
+
+/*hover navbar*/
+.navbar a:hover{
+    scale: 1.1;
+}
+
+/*---------------Titles--------------*/
+.mainTitle-container{
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+div .mainTitle-text{
+    display: inline-block;
+    text-align: center;
+    font-size: 350%;
+    font-weight: bold;
+    font-family: "Signika Negative",sans-serif;
+    padding: 3px;
+    color: #E04136;
+}
+

@@ -1,0 +1,104 @@
+/*Text Title*/
+.mainTitle-text {
+    font-size: 2em;
+}
+
+/* Contenedor principal para evitar desbordamiento */
+#aboutMe-container{
+    position: relative;
+    height: 105vh;
+}
+
+/*Squares info*/
+.aboutMe-aptitudes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+    grid-template-rows: auto auto auto auto; /* 4 filas de igual tamaño */
+    gap: 15% 0%; /* Espacio entre los elementos */
+    justify-items: center; /* Centra los elementos en la grilla */
+    position: relative;
+    padding-left: 8vw;
+}
+
+/* Asegura que la grilla se transforme en una sola columna en pantallas pequeñas */
+@media (max-width: 812px) {
+    #aboutMe-container{
+        height: 105vh;
+        overflow-y: scroll;
+    }
+
+    .aboutMe-aptitudes {
+        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-rows: auto; /* Ajusta las filas automáticamente */
+    }
+
+    .aptitude {
+        width: 90%; /* Ajusta el ancho para que cada fila ocupe la mayoría del espacio disponible */
+        margin-bottom: -vh;
+        margin-right: 0; /* Elimina el margen derecho negativo */
+    }
+
+    .square-info {
+        margin-left: 8rem; /* Ajusta el margen izquierdo relativo al tamaño del square */
+        max-width: calc(100% - 8rem); /* Ajusta el ancho máximo relativo al tamaño del square */
+    }
+
+    .aboutMe-aptitudes .aptitude:hover{
+        scale: 1;
+        margin-right: 0vh;
+    }
+}
+
+.aptitude {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    width: 100%; /* Asegura que cada fila ocupe el 100% del ancho del contenedor */
+    height: 7rem;
+    max-width: 500px; /* Tamaño máximo para evitar crecimiento excesivo */
+    position: relative; /* Posicionamiento relativo para el square */
+    transition: all 0.2s ease;
+}
+
+
+.square {
+    width: 7rem;
+    height: 7rem;
+    background-color: #F2613F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alinea a la izquierda del contenedor */
+    flex-shrink: 0; /* Evita que el square se reduzca */
+}
+
+/*Image into square */
+.aptitude .square svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+/*Square text*/
+.square-info {
+    font-size: 24px;
+    margin-left: 8rem; /* Margen izquierdo suficiente para el tamaño del square */
+    white-space: normal; /* Permite el ajuste del texto a varias líneas */
+    word-wrap: break-word; /* Permite el corte de palabras largas para ajustarse al contenedor */
+    max-width: calc(100% - 8rem); /* Ajusta el ancho máximo relativo al tamaño del square */
+    color: black;
+}
+
+/*Square hover*/
+.aboutMe-aptitudes .aptitude:hover {
+    background-color: #797c7d33;
+    scale: 1.1;
+    margin-right: 3vw;
+}
+
+@media (max-width: 768px) {
+    .aboutMe-aptitudes .aptitude:hover{
+        scale: 1;
+        margin-right: 0vh;
+    }
+}
+
