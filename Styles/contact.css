@@ -1,93 +1,85 @@
-
-#Contact-container{
-     width: 100%;
-     height: 80vh;
-     max-width: 1100px;
-     margin: auto;
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     grid-gap: 50px;
-     margin-top: 90px;
+#Contact-container {
+    width: 100%;
+    height: 80vh;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
 }
 
-#Contact-container h2{
-     margin-bottom: 15px;
-     font-size: 35px;
-     color: #E04136;
-     margin-left: 10px;
+#Contact-container h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: #E04136;
+    margin-left: 10px;
 }
 
-#Contact-container p{
-     font-size: 19px;
-     line-height: 1.6;
-     margin-bottom: 30px;
-     margin-left: 10px;
-     font-family: "Nunito", sans-serif;;
+#Contact-container p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    font-family: "Nunito", sans-serif;
 }
 
-#Contact-container a{
-     font-size: 18px;
-     display: inline-block;
-     text-decoration: none;
-     width: 100%;
-     margin-bottom: 15px;
-     color: black;
-     font-weight: 700;
+#Contact-container a {
+    font-size: 21px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: rgb(252, 91, 33);
+    font-weight: 700;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
 }
 
-#Contact-container a i{
-     color: rgb(252, 91, 33);
-     margin-right: 10px;
-     font-weight: 600;
-     margin-left: 10px;
-     font-size: 18px;
-     cursor: pointer;
+#Contact-container a:hover {
+    color: orangered;
 }
 
-#Contact-container a i:hover{
-     color: orangered;
-
+#Contact-container form .campo,
+#Contact-container form textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 17px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    outline: 0;
+    transition: all 0.2s ease-in;
+    font-family: "Signika Negative", sans-serif;
 }
 
-#Contact-container form .campo, textarea{
-     width: 100%;
-     padding: 15px 10px;
-     font-size: 17px;
-     border: 1px solid black;
-     margin-bottom: 20px;
-     border-radius: 8px;
-     outline: 0px;
-     transition: all 0.2s ease-in;
-     font-family: "Signika Negative";
-
+#Contact-container form textarea {
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+    font-family: "Nunito", sans-serif;
 }
 
-#Contact-container form textarea{
-     content: none;
-     max-width: 530px;
-     min-width: 530px;
-     min-height: 140px;
-     max-height: 150px;
-     font-family: "Nunito", sans-serif;;
+#Contact-container .btn-enviar {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background: rgb(252, 91, 33);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.2s ease-in;
+    font-family: "Rubik", sans-serif;
 }
 
-#Contact-container .btn-enviar{
-     padding: 15px;
-     font-size: 16px;
-     border: none;
-     outline: 0px;
-     background: rgb(252, 91, 33);
-     color: white;
-     border-radius: 3px;
-     cursor: pointer;
-     transition: all 0.5s ease;
-     font-family: "Rubik", sans-serif;
+#Contact-container .btn-enviar:hover,
+#Contact-container form .campo:hover,
+#Contact-container form textarea:hover {
+    transform: scale(1.03);
 }
 
-#Contact-container .btn-enviar:hover{
-     background-color: rgb(255, 72, 0);
-}
-
-#Contact-container form .campo:hover, textarea:hover, .btn-enviar:hover{
-     scale: 1.03;
+#Contact-container .btn-enviar:hover {
+    background-color: rgb(255, 72, 0);
 }

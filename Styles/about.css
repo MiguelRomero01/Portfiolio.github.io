@@ -1,28 +1,27 @@
-/*Text Title*/
+/* Text Title */
 .mainTitle-text {
     font-size: 2em;
 }
 
 /* Contenedor principal para evitar desbordamiento */
-#aboutMe-container{
+#aboutMe-container {
     position: relative;
     height: 105vh;
 }
 
-/*Squares info*/
+/* Squares info */
 .aboutMe-aptitudes {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
-    grid-template-rows: auto auto auto auto; /* 4 filas de igual tamaño */
-    gap: 15% 0%; /* Espacio entre los elementos */
+    grid-template-rows: repeat(4, auto); /* 4 filas de igual tamaño */
+    gap: 15% 0; /* Espacio entre los elementos */
     justify-items: center; /* Centra los elementos en la grilla */
     position: relative;
     padding-left: 8vw;
 }
 
-/* Asegura que la grilla se transforme en una sola columna en pantallas pequeñas */
 @media (max-width: 812px) {
-    #aboutMe-container{
+    #aboutMe-container {
         height: 105vh;
         overflow-y: scroll;
     }
@@ -34,7 +33,7 @@
 
     .aptitude {
         width: 90%; /* Ajusta el ancho para que cada fila ocupe la mayoría del espacio disponible */
-        margin-bottom: -vh;
+        margin-bottom: -1vh; /* Ajusta el margen inferior */
         margin-right: 0; /* Elimina el margen derecho negativo */
     }
 
@@ -43,9 +42,9 @@
         max-width: calc(100% - 8rem); /* Ajusta el ancho máximo relativo al tamaño del square */
     }
 
-    .aboutMe-aptitudes .aptitude:hover{
+    .aboutMe-aptitudes .aptitude:hover {
         scale: 1;
-        margin-right: 0vh;
+        margin-right: 0;
     }
 }
 
@@ -59,7 +58,6 @@
     transition: all 0.2s ease;
 }
 
-
 .square {
     width: 7rem;
     height: 7rem;
@@ -72,13 +70,12 @@
     flex-shrink: 0; /* Evita que el square se reduzca */
 }
 
-/*Image into square */
-.aptitude .square svg {
-    width: 3rem;
-    height: 3rem;
+/* Image into square */
+.aptitude .square i {
+    font-size: 50px;
 }
 
-/*Square text*/
+/* Square text */
 .square-info {
     font-size: 24px;
     margin-left: 8rem; /* Margen izquierdo suficiente para el tamaño del square */
@@ -88,7 +85,7 @@
     color: black;
 }
 
-/*Square hover*/
+/* Square hover */
 .aboutMe-aptitudes .aptitude:hover {
     background-color: #797c7d33;
     scale: 1.1;
@@ -96,9 +93,8 @@
 }
 
 @media (max-width: 768px) {
-    .aboutMe-aptitudes .aptitude:hover{
+    .aboutMe-aptitudes .aptitude:hover {
         scale: 1;
-        margin-right: 0vh;
+        margin-right: 0;
     }
 }
-

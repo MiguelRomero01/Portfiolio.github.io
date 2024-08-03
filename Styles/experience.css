@@ -1,283 +1,273 @@
-
-/*certificates animations*/
-@keyframes showprojects-right{
-     from{
-         transform: translatex(700%);
-         opacity: 0;scale: 1%;
-     }
- 
-     to{
-         opacity: 1; scale: 100%;
-     }
- }
-
- @keyframes showprojects-left{
-     from{
-         transform: translatex(-700%);
-         opacity: 0;scale: 1%;
-     }
- 
-     to{
-         opacity: 1; scale: 100%;
-     }
- }
-
- /*translating axe-X animations*/
-#certificate1{
-     animation-name: showprojects-right;
+/* certificates animations */
+@keyframes showprojects-right {
+    from {
+        transform: translateX(700%);
+        opacity: 0;
+        scale: 1%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
-#certificate2{
-     animation-name: showprojects-left;
+@keyframes showprojects-left {
+    from {
+        transform: translateX(-700%);
+        opacity: 0;
+        scale: 1%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
 }
 
-/*Introduction Text with its levels*/
-.intro-paragraph{
-     font-size: 30px;
-     color: rgb(0, 0, 0);
-     z-index: 5;
-     margin: 50px;
+/* translating axe-X animations */
+#certificate1 {
+    animation-name: showprojects-right;
 }
 
-.my_knowledge{
-     font-size: 28px;
-     margin: 50px;
-     list-style: none; 
+#certificate2 {
+    animation-name: showprojects-left;
 }
 
-.my_knowledge li{
-padding-bottom: 7px;
-color: black;
-}
-   
-.my_knowledge li::before{
-     content: "⭐️";
-     font-size: 18px;
-     padding-right: 10px;
-}
-   
-/*------My knowledge (%)--------------*/
-/*My knowledge (%) -- Containers--*/
-.container-MyKnowledge{
-     padding-top: 2.8vh;
-     padding-bottom: 2.8vh;
-     position: relative;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-wrap: wrap;
-     gap: 90px;
-     background-color:transparent;
-}
-     
-.container-MyKnowledge .progress-knowledge{
-     position: relative;
-     width: 180px;
-     height: 180px;
-     border-radius: 50%;
-     color: aliceblue;
-     background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
-     box-shadow: 0 0 17px #78797a;
+/* Introduction Text with its levels */
+.intro-paragraph {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    z-index: 5;
+    margin: 50px;
 }
 
-
-.container-MyKnowledge .progress-knowledge::before{
-     content: '';
-     display: block;
-     height: 100%;
-     margin-left: 50%;
-     transform-origin: left;
-     border-radius: 0 100% 100% 0/50%;
-}
-   
-.container-MyKnowledge .progress-knowledge::after{
-     content: '';
-     position: absolute;
-     inset: 18px;
-     border-radius: 50%;
-     background:#21262c;
+.my_knowledge {
+    font-size: 28px;
+    margin: 50px;
+    list-style: none;
 }
 
-/*My knowledge (%) -- Titles--*/
-.container-MyKnowledge .progress-knowledge h3{
-     position: absolute;
-     top: 18%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     font-size: 2.8em;
-     z-index: 1;
-     font-weight: 500;
-}
-     
-.container-MyKnowledge .progress-knowledge h3 span{
-     font-size: 18px;
-     font-weight: bolder;    
-}
-     
-.container-MyKnowledge .progress-knowledge h4{
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translateX(-50%);
-     z-index: 1;
-     color: var(--clr);
-     text-transform: uppercase;
+.my_knowledge li {
+    padding-bottom: 7px;
+    color: black;
 }
 
-/*My knowledge (%) --Colors and around --*/
-.container-MyKnowledge .progress-knowledge::before{
-     background: var(--clr);
-     transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
-}
-   
-.container-MyKnowledge .progress-knowledge.less::before{
-     transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
+.my_knowledge li::before {
+    content: "⭐️";
+    font-size: 18px;
+    padding-right: 10px;
 }
 
-/*-------My Certifications-------------*/
+/* My knowledge (%) */
+.container-MyKnowledge {
+    padding-top: 2.8vh;
+    padding-bottom: 2.8vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 90px;
+    background-color: transparent;
+}
+
+.container-MyKnowledge .progress-knowledge {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    color: aliceblue;
+    background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+    box-shadow: 0 0 17px #78797a;
+}
+
+.container-MyKnowledge .progress-knowledge::before,
+.container-MyKnowledge .progress-knowledge.less::before {
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+    background: var(--clr);
+}
+
+.container-MyKnowledge .progress-knowledge::before {
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+}
+
+.container-MyKnowledge .progress-knowledge.less::before {
+    transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
+}
+
+.container-MyKnowledge .progress-knowledge::after {
+    content: '';
+    position: absolute;
+    inset: 18px;
+    border-radius: 50%;
+    background: #21262c;
+}
+
+.container-MyKnowledge .progress-knowledge h3 {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8em;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.container-MyKnowledge .progress-knowledge h3 span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.container-MyKnowledge .progress-knowledge h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: var(--clr);
+    text-transform: uppercase;
+}
+
+/* My Certifications */
 #certificates {
-     padding: 20px;
-   }
-   
-   .certificate-card {
-     display: flex;
-     background: #fff;
-     border-radius: 10px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     margin: 20px auto;
-     max-width: 500px;
-     overflow: hidden;
-     margin-bottom: 2rem;
-   }
-   
-
-   
-   .certificate-card img {
-   width: 100%;
-   max-width: 160px;
-     border-top-left-radius: 10px;
-     border-bottom-left-radius: 10px;
-   }
-   
-   .certificate-info {
-     padding: 20px;
-   }
-   
-   .certificate-info h3 {
-     margin-top: 0;
-     color: black;
-     font-family: "Nunito", sans-serif;
-   }
-   
-   .certificate-info p {
-     color: #777;
-     font-family: "Signika Negative";
-   }
-   
-   .certificate-info a {
-     color: #007BFF;
-     text-decoration: none;
-   }
-   
-   .certificate-info a:hover {
-     text-decoration: underline;
-   }
-   
-
-/*-------My projects-----------*/
-
-#img-container{
-     text-align: center;
+    padding: 20px;
 }
 
-   .projects-links {
-     display: inline-block;
-     background-color: #212020;
-     margin: 20px; 
-     text-decoration: none;
-     color: #fff; 
-     border-radius: 30px;
-     max-width: 19em;
-     transition: all 0.2s linear;
-   }
+.certificate-card {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
 
-   .projects-links:hover {
-     border: 0.1em solid #04B2D9;
-     padding: 1em 0 1em 0;
-     max-width: 20em;
-     box-shadow: 0 0 30px 7px #333232eb;
-     transition: all 0.2s linear; 
-   }
-   
-   /*projects'text*/
-   .projects-tittle {
-     font-size: 26px;
-     margin-left: 10px;
-     font-family: Kalnia;
-     color: #B2BEBF;
-     text-align: justify;
-     transition: all 0.2s linear;
-     margin: 15px;
-   }
+.certificate-card img {
+    width: 100%;
+    max-width: 160px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 
-   .img-text {
-     font-size: 18px;
-     text-align: center;
-     padding-bottom: 1em;
-     white-space: normal;
-      word-wrap: break-word;
-      transition: all 0.2s linear;
-   }
+.certificate-info {
+    padding: 20px;
+}
 
-   .projects-links:hover .projects-tittle {
-     font-size: 30px;
-     color: #04B2D9; 
-   }
+.certificate-info h3 {
+    margin-top: 0;
+    color: black;
+    font-family: "Nunito", sans-serif;
+}
 
-   .projects-links:hover .img-text {
-     font-size: 20px; 
-   }
+.certificate-info p {
+    color: #777;
+    font-family: "Signika Negative";
+}
 
-   /*projects'images*/
-   .projects-images {
-     width: 19em;
-     height: 19em;
-     border-top-left-radius: 30px;
-     border-top-right-radius: 30px;
-     transition: all 0.2s linear;
-   }
-   
-   .projects-links:hover .projects-images {
-     width: 100%;
-     height: 20em;
-   }
-   
-   /*Languages used in the project*/
-   .used-languages i{
-     font-size: 30px;
-     margin-left: 0.5em;
-     transition: all 0.2s linear;
-     justify-content: left;
-   }
+.certificate-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
 
-   #html-icon{
-     color: orangered;
-   }
+.certificate-info a:hover {
+    text-decoration: underline;
+}
 
-   #css-icon{
-     color: #04B2D9;
-   }
+/* My projects */
+#img-container {
+    text-align: center;
+}
 
-   #js-icon{
-     color: yellow;
-   }
+.projects-links {
+    display: inline-block;
+    background-color: #212020;
+    margin: 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 30px;
+    max-width: 19em;
+    transition: all 0.2s linear;
+}
 
+.projects-links:hover {
+    border: 0.1em solid #04B2D9;
+    padding: 1em 0;
+    max-width: 20em;
+    box-shadow: 0 0 30px 7px #333232eb;
+}
 
-.subTitles h2{
-     font-size: 45px;
-     font-family: "Roboto Slab",serif;
-     font-weight: 800;
-     color: #e23917;
-     text-align: center;
-     margin-top: 8vh;
+.projects-tittle {
+    font-size: 26px;
+    margin-left: 10px;
+    font-family: Kalnia;
+    color: #B2BEBF;
+    text-align: justify;
+    transition: all 0.2s linear;
+    margin: 15px;
+}
+
+.img-text {
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 1em;
+    white-space: normal;
+    word-wrap: break-word;
+    transition: all 0.2s linear;
+}
+
+.projects-links:hover .projects-tittle {
+    font-size: 30px;
+    color: #04B2D9;
+}
+
+.projects-links:hover .img-text {
+    font-size: 20px;
+}
+
+.projects-images {
+    width: 19em;
+    height: 19em;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: all 0.2s linear;
+}
+
+.projects-links:hover .projects-images {
+    width: 100%;
+    height: 20em;
+}
+
+/* Languages used in the project */
+.used-languages i {
+    font-size: 30px;
+    margin-left: 0.5em;
+    transition: all 0.2s linear;
+    justify-content: left;
+}
+
+#html-icon {
+    color: orangered;
+}
+
+#css-icon {
+    color: #04B2D9;
+}
+
+#js-icon {
+    color: yellow;
+}
+
+.subTitles h2 {
+    font-size: 45px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 800;
+    color: #e23917;
+    text-align: center;
+    margin-top: 8vh;
 }
