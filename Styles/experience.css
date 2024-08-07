@@ -192,14 +192,12 @@
     color: #fff;
     border-radius: 30px;
     max-width: 19em;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
 }
 
 .projects-links:hover {
-    border: 0.1em solid #04B2D9;
-    padding: 1em 0;
     max-width: 20em;
-    box-shadow: 0 0 30px 7px #333232eb;
+    box-shadow: 13px 10px 20px black;
 }
 
 .projects-tittle {
@@ -263,11 +261,3 @@
     color: yellow;
 }
 
-.subTitles h2 {
-    font-size: 45px;
-    font-family: "Roboto Slab", serif;
-    font-weight: 800;
-    color: #e23917;
-    text-align: center;
-    margin-top: 8vh;
-}
