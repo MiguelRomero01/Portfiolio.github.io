@@ -1,0 +1,82 @@
+/* My projects */
+#img-container {
+     text-align: center;
+ }
+ 
+ .projects-links {
+     display: inline-block;
+     background-color: #212020;
+     margin: 20px;
+     text-decoration: none;
+     color: #fff;
+     border-radius: 30px;
+     max-width: 19em;
+     transition: all 0.2s linear;
+ }
+ 
+ .projects-links:hover {
+     max-width: 20em;
+     box-shadow: 13px 10px 20px black;
+ }
+ 
+ .projects-tittle {
+     font-size: 26px;
+     margin-left: 10px;
+     font-family: Kalnia;
+     color: #B2BEBF;
+     text-align: justify;
+     transition: all 0.1s linear;
+     margin: 15px;
+ }
+ 
+ .img-text {
+     font-size: 18px;
+     text-align: center;
+     padding-bottom: 1em;
+     white-space: normal;
+     word-wrap: break-word;
+     transition: all 0.2s linear;
+ }
+ 
+ .projects-links:hover .projects-tittle {
+     font-size: 30px;
+     color: #04B2D9;
+ }
+ 
+ .projects-links:hover .img-text {
+     font-size: 20px;
+ }
+ 
+ .projects-images {
+     width: 19em;
+     height: 19em;
+     border-top-left-radius: 30px;
+     border-top-right-radius: 30px;
+     transition: all 0.2s linear;
+ }
+ 
+ .projects-links:hover .projects-images {
+     width: 100%;
+     height: 20em;
+ }
+ 
+ /* Languages used in the project */
+ .used-languages i {
+     font-size: 30px;
+     margin-left: 0.5em;
+     transition: all 0.2s linear;
+     justify-content: left;
+ }
+ 
+ #html-icon {
+     color: orangered;
+ }
+ 
+ #css-icon {
+     color: #04B2D9;
+ }
+ 
+ #js-icon {
+     color: yellow;
+ }
+ 
